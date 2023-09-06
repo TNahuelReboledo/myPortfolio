@@ -1,0 +1,117 @@
+.get_in_touch {
+   color: #fff;
+   font-size: 3.5rem;
+   width: 100vw;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.contact_icons {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 5rem;
+   padding-bottom: 3rem;
+
+   & > img {
+      width: 3rem;
+      cursor: pointer;
+   }
+}
+
+.gmail:hover,
+.linkedin:hover,
+.github:hover {
+   opacity: 0;
+}
+
+.gmailColor:hover {
+   filter: drop-shadow(0px 0px 20px #ea4335) drop-shadow(0px 0px 40px #ea4335)
+      drop-shadow(0px 0px 60px #ea4335);
+}
+
+.linkedinColor:hover {
+   filter: drop-shadow(0px 0px 20px #0a66c2) drop-shadow(0px 0px 40px #0a66c2)
+      drop-shadow(0px 0px 60px #0a66c2);
+}
+
+.githubColor:hover {
+   filter: drop-shadow(0px 0px 20px #689f63) drop-shadow(0px 0px 40px #689f63)
+      drop-shadow(0px 0px 60px #689f63);
+}
+
+.gmailColor:hover,
+.linkedinColor:hover,
+.githubColor:hover {
+   opacity: 1;
+   transition: all 0.3s ease;
+}
+
+.form_container {
+   width: 100vw;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding-bottom: 2rem;
+}
+
+.form {
+   display: flex;
+   flex-direction: column;
+   width: 30%;
+   font-family: 'Roboto Flex', sans-serif;
+   ;
+
+   & input{
+      background: #ffffff10;
+      border: none;
+      outline: none;
+      color: #fff;
+      height: 1.5rem;
+      padding-left: 5px;
+      margin-top: 5px;
+   }
+
+   & textarea{
+      font-family: 'Roboto Flex', sans-serif;
+      background: #ffffff10;
+      border: none;
+      outline: none;
+      color: #fff;
+      resize: none;
+      height: 10rem;
+      padding-left: 5px;
+      margin-top: 5px;
+   }
+}
+
+.label {
+   font-size: 15px;
+   color: #ffffff90;
+   margin-top: 1rem;
+   /* padding-left: 10px;
+   margin:.5rem; */
+}
+
+.button_submit{
+   margin-top: 1rem;
+   height: 2rem;
+   border-radius: 5rem;
+   border: solid white 1px;
+   cursor: pointer;
+   transition: all .3s ease;
+
+   &:hover{
+      border: white 1px solid;
+      background: transparent;
+      color: #fff;
+   }
+}
+
+.paragraph_non_button{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+}

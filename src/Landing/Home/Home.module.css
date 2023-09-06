@@ -1,0 +1,43 @@
+.bg_blur1{
+   position: absolute;
+   width: 50rem;
+   filter: blur(80px);
+}
+
+.home_page_container{
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.logo_container{
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.logo_TNR{
+   width: 10.5rem;
+   position: relative;
+   top: 2rem;
+}
+
+.name_tnr{
+   color: #ffffff;
+   font-weight: 300;
+   font-size: 2.3rem;
+   position: relative;
+   top: 8rem;
+}
+
+.portfolio_text{
+   width: 40rem;
+   position: relative;
+   top: 2.5rem;
+   right: .5rem;
+}

@@ -1,0 +1,25 @@
+.first_tag_projects,
+.last_tag_projects {
+   background: linear-gradient(180deg, #630ec9 0%, #6ebd1c 100%);
+   background-clip: text;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   width: 100vw;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 15rem;
+   font-weight: 600;
+   margin: 0;
+   padding: 0;
+   filter: blur(12px);
+}
+
+.text_no_projects {
+   margin: 0;
+   width: 100vw;
+   text-align: center;
+   font-weight: 500;
+   font-size: 2rem;
+   color: #fff;
+}
