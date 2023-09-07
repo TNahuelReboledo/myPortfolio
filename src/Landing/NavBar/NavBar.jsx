@@ -1,15 +1,28 @@
 import React from "react";
-import style from "./NavBar.module.css"
+import style from "./NavBar.module.css";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 function NavBar() {
    return (
-      <div>
-         <header className={style.navbar}>
-            <a href="#home">home</a>
-            <a href="#projects">projects</a>
-            <a href="#about">about</a>
-            <a href="#contact">contact</a>
-         </header>
+      <div className={style.navbar_container}>
+         <nav className={style.navbar}>
+            
+               <Link className={style.link} smooth={true} duration={500} to="home">
+                  home
+               </Link>
+            
+               <Link className={style.link} smooth={true} duration={500} activeStyle={"backgroundColor: blue"} to="projects">
+                  projects
+               </Link>
+            
+               <Link className={style.link} smooth={true} duration={500} to="about">
+                  about
+               </Link>
+            
+               <Link className={style.link} smooth={true} duration={500} to="contact">
+                  contact
+               </Link>
+         </nav>
       </div>
    );
 }
