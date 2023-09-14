@@ -27,10 +27,17 @@
    }
 }
 
-.active_link{
-   color: red;
-}
+/* @media screen and (max-width:480px){
+   .navbar_container{
+      background: #000000;
+      justify-content: center;
+   }
 
-.active{
-   background-color: red;
-}
+   .navbar{
+      gap: 1rem;
+      margin: 0;
+      width: 100vw;
+      justify-content: space-evenly;
+   }
+
+} */
