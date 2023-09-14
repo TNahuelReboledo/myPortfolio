@@ -2,7 +2,6 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Toaster, toast } from "sonner";
 import { Tooltip } from "react-tooltip";
-
 import style from "./Contact.module.css";
 import gmailIcon from "../../assets/gmail.svg";
 import gmailIconColor from "../../assets/gmailColor.svg";
@@ -97,7 +96,7 @@ function Contact() {
    };
 
    return (
-      <>
+      <div>
          <section id="contact">
             <h2 className={style.get_in_touch}>Get in touch</h2>
 
@@ -105,6 +104,8 @@ function Contact() {
                {isHovered1 ? (
                   <img
                      className={style.gmail}
+                     data-tooltip-id="my-tooltip-gmail"
+                     data-tooltip-content="Click to copy my email address."
                      onMouseEnter={handleHoveredGmail}
                      src={gmailIcon}
                      alt=""
@@ -126,6 +127,8 @@ function Contact() {
                {isHovered2 ? (
                   <img
                      className={style.linkedin}
+                     data-tooltip-id="my-tooltip-linkedin"
+                     data-tooltip-content="go to my LinkedIn."
                      onMouseEnter={handleHoveredLinkedin}
                      src={linkedinIcon}
                      alt=""
@@ -146,6 +149,8 @@ function Contact() {
                {isHovered3 ? (
                   <img
                      className={style.github}
+                     data-tooltip-id="my-tooltip-github"
+                     data-tooltip-content="Go to my GitHub."
                      onMouseEnter={handleHoveredGithub}
                      src={githubIcon}
                      alt=""
@@ -208,7 +213,7 @@ function Contact() {
          </section>
 
          <Toaster position="bottom-right" />
-      </>
+      </div>
    );
 }
 

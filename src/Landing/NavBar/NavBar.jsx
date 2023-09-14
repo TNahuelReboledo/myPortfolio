@@ -11,7 +11,7 @@ function NavBar() {
                   home
                </Link>
             
-               <Link className={style.link} smooth={true} duration={500} activeStyle={"backgroundColor: blue"} to="projects">
+               <Link className={style.link} smooth={true} duration={500} to="projects">
                   projects
                </Link>
             
