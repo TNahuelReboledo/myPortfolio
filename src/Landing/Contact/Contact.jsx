@@ -29,7 +29,7 @@ function Contact() {
 
    const handleGmail = () => {
       const gmailAdress = "thiagoreboledo8@gmail.com";
-      navigator.clipboard.writeText(gmailAdress)
+      navigator.clipboard.writeText(gmailAdress);
       toast.success(`copied correctly`);
    };
 
@@ -57,6 +57,8 @@ function Contact() {
 
    const form = useRef();
 
+   const [sended, setSended] = useState(false);
+
    const sendEmail = (e) => {
       e.preventDefault();
 
@@ -70,6 +72,9 @@ function Contact() {
          .then(
             (result) => {
                console.log(result.text);
+               setEmail("");
+               setName("");
+               setMessage("");
             },
             (error) => {
                console.log(error.text);
@@ -123,7 +128,6 @@ function Contact() {
                )}
                <Tooltip id="my-tooltip-gmail" />
 
-
                {isHovered2 ? (
                   <img
                      className={style.linkedin}
@@ -167,7 +171,6 @@ function Contact() {
                   />
                )}
                <Tooltip id="my-tooltip-github" />
-
             </div>
 
             <div className={style.form_container}>
@@ -198,9 +201,17 @@ function Contact() {
                      placeholder="If you have any suggestions or you would like me to contact you, let me know here."
                   />
 
-                  {name === "" || email === "" || !(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email) )|| message === "" ? 
-                     <p className={style.paragraph_non_button}>Correctly filling out all fields is necessary to enable form submission.</p>
-                  : (
+                  {name === "" ||
+                  email === "" ||
+                  !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
+                     email
+                  ) ||
+                  message === "" ? (
+                     <p className={style.paragraph_non_button}>
+                        Correctly filling out all fields is necessary to enable
+                        form submission.
+                     </p>
+                  ) : (
                      <button
                         className={style.button_submit}
                         type="submit"
@@ -209,7 +220,9 @@ function Contact() {
                      </button>
                   )}
                </form>
+
             </div>
+
          </section>
 
          <Toaster position="bottom-right" />
