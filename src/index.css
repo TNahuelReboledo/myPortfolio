@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   scroll-behavior: smooth;
+   font-family: "Roboto", sans-serif;
+}
+
+@layer {
+   li{
+      @apply font-bold text-2xl cursor-pointer text-[#f2e9e490] hover:text-[#f2e9e4] transition-colors duration-150;
+   }
+
+   ul{
+      @apply flex flex-col gap-6 text-center list-none;
+   }
+}

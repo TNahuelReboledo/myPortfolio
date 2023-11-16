@@ -1,9 +1,9 @@
 import "./App.css";
-import NavBar from "./Landing/NavBar/NavBar";
-import Home from "./Landing/Home/Home";
-import Projects from "./Landing/Projects/Projects";
-import About from "./Landing/About/About";
-import Contact from "./Landing/Contact/Contact";
+import NavBar from "./Components/NavBar/NavBar";
+import Home from "./Components/Home/Home";
+import Projects from "./Components/Projects/Projects";
+import About from "./Components/About/About";
+import Contact from "./Components/Contact/Contact";
 
 function App() {
 
@@ -11,9 +11,9 @@ function App() {
       <>
          <NavBar />
          <Home />
-         <Projects />
+         {/* <Projects />
          <About />
-         <Contact />
+         <Contact /> */}
       </>
    );
 }

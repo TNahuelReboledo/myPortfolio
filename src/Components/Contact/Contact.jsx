@@ -2,7 +2,6 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Toaster, toast } from "sonner";
 import { Tooltip } from "react-tooltip";
-import style from "./Contact.module.css";
 import gmailIcon from "../../assets/gmail.svg";
 import gmailIconColor from "../../assets/gmailColor.svg";
 import linkedinIcon from "../../assets/linkedin.svg";
@@ -103,12 +102,11 @@ function Contact() {
    return (
       <div>
          <section id="contact">
-            <h2 className={style.get_in_touch}>Get in touch</h2>
+            <h2 >Get in touch</h2>
 
-            <div className={style.contact_icons}>
+            <div >
                {isHovered1 ? (
                   <img
-                     className={style.gmail}
                      data-tooltip-id="my-tooltip-gmail"
                      data-tooltip-content="Click to copy my email address."
                      onMouseEnter={handleHoveredGmail}
@@ -117,7 +115,6 @@ function Contact() {
                   />
                ) : (
                   <img
-                     className={style.gmailColor}
                      data-tooltip-id="my-tooltip-gmail"
                      data-tooltip-content="Click to copy my email address."
                      onMouseLeave={handleHoveredGmail}
@@ -130,7 +127,6 @@ function Contact() {
 
                {isHovered2 ? (
                   <img
-                     className={style.linkedin}
                      data-tooltip-id="my-tooltip-linkedin"
                      data-tooltip-content="go to my LinkedIn."
                      onMouseEnter={handleHoveredLinkedin}
@@ -139,7 +135,6 @@ function Contact() {
                   />
                ) : (
                   <img
-                     className={style.linkedinColor}
                      data-tooltip-id="my-tooltip-linkedin"
                      data-tooltip-content="go to my LinkedIn."
                      onMouseLeave={handleHoveredLinkedin}
@@ -152,7 +147,6 @@ function Contact() {
 
                {isHovered3 ? (
                   <img
-                     className={style.github}
                      data-tooltip-id="my-tooltip-github"
                      data-tooltip-content="Go to my GitHub."
                      onMouseEnter={handleHoveredGithub}
@@ -161,7 +155,6 @@ function Contact() {
                   />
                ) : (
                   <img
-                     className={style.githubColor}
                      data-tooltip-id="my-tooltip-github"
                      data-tooltip-content="Go to my GitHub."
                      onMouseLeave={handleHoveredGithub}
@@ -173,9 +166,9 @@ function Contact() {
                <Tooltip id="my-tooltip-github" />
             </div>
 
-            <div className={style.form_container}>
-               <form className={style.form} ref={form} onSubmit={sendEmail}>
-                  <label className={style.label}>Name</label>
+            <div >
+               <form ref={form} onSubmit={sendEmail}>
+                  <label >Name</label>
                   <input
                      type="text"
                      name="user_name"
@@ -184,7 +177,7 @@ function Contact() {
                      autoComplete="off"
                   />
 
-                  <label className={style.label}>Email</label>
+                  <label>Email</label>
                   <input
                      type="email"
                      name="user_email"
@@ -193,7 +186,7 @@ function Contact() {
                      autoComplete="off"
                   />
 
-                  <label className={style.label}>Message</label>
+                  <label>Message</label>
                   <textarea
                      name="message"
                      onChange={handleMessage}
@@ -207,13 +200,12 @@ function Contact() {
                      email
                   ) ||
                   message === "" ? (
-                     <p className={style.paragraph_non_button}>
+                     <p >
                         Correctly filling out all fields is necessary to enable
                         form submission.
                      </p>
                   ) : (
                      <button
-                        className={style.button_submit}
                         type="submit"
                         value="Send">
                         send
