@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
-import { CgMenu , CgMenuRightAlt  , CgClose } from "react-icons/cg";
-
+import { CgMenuRightAlt, CgClose } from "react-icons/cg";
 
 function NavBar() {
    const [menu, setMenu] = useState(false);
@@ -12,24 +11,24 @@ function NavBar() {
 
    return (
       <header
-         className={`flex flex-col justify-center items-center text-[#f2e9e4] transition-all duration-200 ${menu ? "bg-[#22223b]":"bg-transparent"}`}>
+         className={`flex flex-col justify-center items-center fixed z-50 text-[#f2e9e4] transition-all duration-200 ${
+            menu ? "bg-[#22223b]" : "bg-transparent"
+         }`}>
          <div className="flex w-screen flex-row justify-end items-end">
             <button
                onClick={menuToggle}
                className={`mt-4 mr-4 ${menu ? "" : "text-[#22223b]"}`}>
-
-                  {menu ?
-               <CgClose size={45}/> :
-               <CgMenuRightAlt  size={45} />
-            }
+               {menu ? <CgClose size={45} /> : <CgMenuRightAlt size={45} />}
             </button>
          </div>
 
          <nav
             className={`w-screen flex flex-col justify-center items-center transition-all duration-200 ${
-               menu ? "h-[40vh] opacity-1 shadow-2xl visible" : "opacity-0 h-0 invisible"
+               menu
+                  ? "h-[40vh] opacity-1 shadow-2xl visible"
+                  : "opacity-0 h-0 invisible"
             }`}>
-            <ul   >
+            <ul>
                <li>
                   <Link smooth={true} duration={500} to="home">
                      home
