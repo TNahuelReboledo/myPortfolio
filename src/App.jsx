@@ -14,7 +14,7 @@ function App() {
          {/* <MaintenancePage/> */}
 
          {/* <NavBar /> */}
-         <div className="min-h-screen overflow-x-hidden p-3 flex flex-col items-center bg-dark">
+         <div className="min-h-screen overflow-x-hidden p-5 flex flex-col items-center bg-light">
             <Home />
             <Projects />
             <Stack />

@@ -10,7 +10,6 @@
    box-sizing: border-box;
    scroll-behavior: smooth;
    font-family: "Roboto", sans-serif;
-   color: #f8f7ff;
 }
 
 @layer base {
@@ -23,20 +22,20 @@
    } */
 
    h2 {
-      @apply font-semibold text-xl my-5;
+      @apply font-semibold text-xl my-5 text-dark;
    }
 
    hr {
-      @apply h-px min-w-full my-6 border-light-50-opacity;
+      @apply h-px min-w-full my-6 border-dark-75-opacity;
    }
 
    p {
-      @apply text-sm text-center mx-2;
+      @apply text-sm text-center mx-2 text-dark;
    }
 
    .resume-btn,
    .job-btn {
-      @apply bg-yellow text-lg w-2/3 max-w-md h-11 rounded-md border drop-shadow-md  border-yellow hover:bg-transparent hover:text-yellow hover:translate-y-0.5 transition-all duration-300;
+      @apply text-light bg-yellow text-lg w-2/3 max-w-md h-11 rounded-md border shadow-[rgba(50,50,93,0.10)_0px_6px_12px_-2px,_rgba(0,0,0,0.25)_0px_3px_7px_-3px] border-yellow hover:bg-transparent hover:text-yellow hover:shadow-none hover:translate-y-0.5 transition-all duration-300;
    }
 
    .icons-stack {
@@ -44,18 +43,22 @@
    }
 
    .icon-container {
-      @apply bg-gradient-to-tl from-transparent via-light-10-opacity to-light-50-opacity rounded-lg flex justify-center items-center m-2;
+      @apply shadow-[0_3px_10px_rgb(0,0,0,0.2)] min-w-0 min-h-0 max-w-[15rem] max-h-[15rem] rounded-lg flex justify-center items-center m-2;
    }
 
-   .card{
-      @apply w-4/5 md:w-2/5 bg-gradient-to-tl from-transparent via-light-10-opacity to-light-50-opacity rounded-lg p-3 hover:scale-105 transition-transform duration-300
+   .card {
+      @apply w-4/5 md:w-2/5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg p-3 hover:scale-105 transition-transform duration-300;
    }
 
-   .scrum-link{
-      @apply flex flex-row gap-2 justify-start items-center underline text-sm italic hover:text-light-75-opacity transition-all duration-300
+   .scrum-link {
+      @apply flex flex-row gap-2 justify-start items-center underline text-sm italic text-dark hover:text-dark-75-opacity transition-all duration-300;
    }
 
-   .contact-link{
-      @apply p-1 rounded-lg transition-all duration-300
+   .contact-link {
+      @apply  hover:fill-dark-85-opacity transition-all duration-300;
+   }
+
+   .footer {
+      @apply w-screen h-12 flex flex-row items-center justify-center gap-5 bg-light shadow-[-10px_-10px_30px_4px_#00304915,_10px_10px_30px_4px_#00304925];
    }
 }

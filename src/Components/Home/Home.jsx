@@ -14,22 +14,22 @@ function Home() {
       <section
          id="home"
          className="max-w-screen-md flex flex-col items-center">
-         <div className="w-full flex justify-end">
+         <div className="w-full flex justify-end mr-8">
             <button onClick={changeTheme}>
                {
                   isLight ? 
-                  <BsSunFill size={25} color="#F8F7FF" className=""/> :
-                  <BsMoonFill size={25} color="#F8F7FF" />
+                  <BsSunFill size={30} color="#003049"  /> :
+                  <BsMoonFill size={30} color="#003049" />
                }
             </button>
          </div>
 
-         <div className="w-32 h-32 flex flex-row justify-center rounded-full bg-gradient-to-b from-dark to-light-50-opacity p-1">
+         <div className="w-32 h-32 flex flex-row justify-center rounded-full shadow-[#00304925_0px_6px_12px_-2px,#00304945_0px_3px_7px_-3px] p-1">
             <img src={miPersonaje} className="rounded-full" alt="" />
          </div>
 
-         <h2 className="font-semibold text-2xl">Thiago N.R.</h2>
-         <p className="text-center text-sm font-light text-light-75-opacity">
+         <h2 className="">Thiago N.R.</h2>
+         <p className="text-center text-sm font-light text-dark-75-opacity">
             I’m a passionate web developer, design UX/UI and graphic designer.
          </p>
 

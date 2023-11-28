@@ -10,7 +10,7 @@ function methodology() {
          <div className="card">
             <div className="flex flex-row justify-between items-center">
                <div>
-                  <h3 className="font-semibold text-lg">SCRUM</h3>
+                  <h3 className="font-semibold text-lg text-dark">SCRUM</h3>
 
                      <div className="scrum-link">
                         <a href="https://www.scrum.org/">www.scrum.org</a>
@@ -18,8 +18,8 @@ function methodology() {
 
                </div>
 
-               <div className="bg-dark p-1 rounded-md bg-opacity-50">
-                  <DiScrum size={50} />
+               <div className="p-1 rounded-md">
+                  <DiScrum size={50} color="#003049"/>
                </div>
             </div>
 
