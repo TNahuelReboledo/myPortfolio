@@ -4,6 +4,7 @@ import Home from "./Components/Home/Home";
 import Projects from "./Components/Projects/Projects";
 import Stack from "./Components/Stack/Stack";
 import Contact from "./Components/Contact/Contact";
+import Methodology from "./Components/Methodology/Methodology";
 import { MaintenancePage } from "./Components/MaintenancePage/MaintenancePage";
 
 function App() {
@@ -13,10 +14,11 @@ function App() {
          {/* <MaintenancePage/> */}
 
          {/* <NavBar /> */}
-         <div className="min-h-screen p-3 absolute z-10 w-screen flex flex-col bg-dark">
+         <div className="min-h-screen overflow-x-hidden p-3 flex flex-col items-center bg-dark">
             <Home />
             <Projects />
             <Stack />
+            <Methodology />
             <div className="fixed bottom-0">
                <Contact />
             </div>

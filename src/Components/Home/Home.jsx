@@ -1,14 +1,26 @@
+import { useState } from "react";
 import miPersonaje from "../../assets/miPersonaje-removebg-preview.png";
-import { BsFillMoonStarsFill } from "react-icons/bs";
+import { BsMoonFill, BsSunFill } from "react-icons/bs";
 
 function Home() {
+
+   const [isLight, setIsLight] = useState(true);
+
+   const changeTheme = () => {
+      setIsLight(!isLight);
+   }
+
    return (
       <section
          id="home"
-         className="max-w-screen-lg flex flex-col items-center">
+         className="max-w-screen-md flex flex-col items-center">
          <div className="w-full flex justify-end">
-            <button>
-               <BsFillMoonStarsFill size={20} color="#F8F7FF" />
+            <button onClick={changeTheme}>
+               {
+                  isLight ? 
+                  <BsSunFill size={25} color="#F8F7FF" className=""/> :
+                  <BsMoonFill size={25} color="#F8F7FF" />
+               }
             </button>
          </div>
 

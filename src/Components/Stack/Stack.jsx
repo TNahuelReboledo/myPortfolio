@@ -13,7 +13,7 @@ import trello from "../../assets/trello.svg";
 
 function Stack() {
    return (
-      <section id="MyStack" className="flex flex-col justify-center items-center w-fit mb-12">
+      <section id="MyStack" className="max-w-screen-md flex flex-col justify-center items-center w-fit">
 
       <h2>My current stack</h2>
 

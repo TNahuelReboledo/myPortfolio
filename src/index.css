@@ -31,19 +31,31 @@
    }
 
    p {
-      @apply text-sm text-center;
+      @apply text-sm text-center mx-2;
    }
 
    .resume-btn,
    .job-btn {
-      @apply bg-yellow text-lg w-2/3 h-11 rounded-md border drop-shadow-md  border-yellow hover:bg-transparent hover:text-yellow hover:translate-y-0.5 transition-all duration-300;
+      @apply bg-yellow text-lg w-2/3 max-w-md h-11 rounded-md border drop-shadow-md  border-yellow hover:bg-transparent hover:text-yellow hover:translate-y-0.5 transition-all duration-300;
    }
 
    .icons-stack {
-      @apply p-5 max-w-full max-h-full;
+      @apply p-5 min-w-0 min-h-0 max-w-[10rem] max-h-[10rem];
    }
 
    .icon-container {
       @apply bg-gradient-to-tl from-transparent via-light-10-opacity to-light-50-opacity rounded-lg flex justify-center items-center m-2;
+   }
+
+   .card{
+      @apply w-4/5 md:w-2/5 bg-gradient-to-tl from-transparent via-light-10-opacity to-light-50-opacity rounded-lg p-3 hover:scale-105 transition-transform duration-300
+   }
+
+   .scrum-link{
+      @apply flex flex-row gap-2 justify-start items-center underline text-sm italic hover:text-light-75-opacity transition-all duration-300
+   }
+
+   .contact-link{
+      @apply p-1 rounded-lg transition-all duration-300
    }
 }
