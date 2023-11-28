@@ -3,23 +3,14 @@ export default {
    content: ["./index.html", "./src/**/*.{js,jsx}"],
    theme: {
       extend: {
-         fontFamily:{
-           
-         },
-         keyframes: {
-            "slide-down": {
-               "0%": {
-                  top: "-20rem",
-               },
-               "100%": {
-                  top: "0rem",
-               },
-            },
-         },
-
-         animation: {
-            "slide-down": "slide-down 1.5s ease-in-out",
-         },
+         colors:{
+            dark: "#003049",
+            light:"#F8F7FF",
+            "light-10-opacity":"#F8F7FF10",
+            "light-50-opacity":"#F8F7FF50",
+            "light-75-opacity":"#F8F7FF75",
+            yellow:"#FCBF49"
+         }
       },
    },
    plugins: [],
