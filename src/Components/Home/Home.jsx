@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import miPersonaje from "../../assets/miPersonaje-removebg-preview.png";
+import miCV from "/Thiago Reboledo CV Desarrollador FullStack.pdf"
 import { BsMoonFill, BsSunFill } from "react-icons/bs";
 
 function Home() {
@@ -47,8 +48,8 @@ function Home() {
          </p>
 
          <div className="w-screen grid grid-cols-1 place-items-center gap-3 my-6">
-            <button className="job-btn">Looking for job</button>
-            <button className="resume-btn">Resume</button>
+            <a href="https://www.linkedin.com/in/thiago-reboledo/" target="_blank" className="job-btn">Looking for job</a>
+            <a href={miCV} download className="resume-btn">Resume</a>
          </div>
       </section>
    );
